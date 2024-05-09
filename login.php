@@ -16,27 +16,31 @@
 
 
 
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="uploads/madruga1.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <form action="" method="post">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@email.com.br">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
-                            <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha">
-                        </div>
-                        <div>
-                            <button class="btn btn-primary" type="submit" name="submit">Entrar</button>
-                        </div>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="content">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="uploads/madruga1.png" class="img-fluid rounded-start" alt="...">
                     </div>
-                </form>
+                    <div class="col-md-8">
+                        <form action="" method="post">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Senha:</label>
+                                    <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha">
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="submit" name="submit">Entrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
