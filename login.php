@@ -12,7 +12,7 @@
 
 
 
-    <h1>Hello, world!</h1>
+    
 
 
 
@@ -70,13 +70,17 @@ if ($_POST) {
 
                 $row = $sql->fetch();
                 $senha_cripto = $row['senha'];
-
-                
-                
+                $usuario = $row['nome'];
 
                 // Corrigindo a ordem dos argumentos na função password_verify()
                 if (password_verify($senha_entrada, $senha_cripto)) {
                     echo "Senha correta";
+
+                    session_start();
+                    $_SESSION['usuario']=$usuario;
+                    $_SESSION['hora']=time();
+                    header('Location: cadastro.php');
+
                 } else {
                     echo "Senha incorreta";
                 }
