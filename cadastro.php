@@ -2,8 +2,6 @@
 
 session_start();
 
-
-
 if(!isset($_SESSION['usuario']) || (time() - 1800 >$_SESSION['hora']) ){
   session_unset();
   session_destroy();
@@ -19,10 +17,8 @@ require 'conexao.php';
 $conexao = null;
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +30,6 @@ $conexao = null;
   <style>
     .parent {
       min-height: 75vh;
-
     }
 
     img{
@@ -71,9 +66,12 @@ $conexao = null;
               </div>
           </div>
           <div class="d-grid gap-2 ">
-            <button class="btn btn-primary" type="submit">Cadastrar</button>
+            <button class="btn btn-primary" type="submit">Cadastrar</button>      
           </div>
           </form>
+          <a href="atividade.php">
+              <button class="btn btn-primary" type="submit">Homepage DSM</button>
+            </a>
         </div>
       </div>
     </div>
@@ -82,19 +80,10 @@ $conexao = null;
 
   <?php
   require 'select.php';
-
-
   ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-
-
-
-
-
-
 </body>
-
 </html>

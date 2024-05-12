@@ -1,7 +1,6 @@
 <?php
 
 if ($_POST){
-
     $diretorio = "uploads/";
     $caminho = $diretorio . basename($_FILES["fl_upload"]["name"]);
     $nome=$_POST["_nome"];

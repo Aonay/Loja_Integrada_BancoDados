@@ -1,4 +1,3 @@
-
 <?php
 
 require "conexao.php";
@@ -15,9 +14,7 @@ if ($array_produtos){
         echo "ID Produto:      " . $prod['id'] . "<br>";
         echo "Nome:    " . $prod['nome'] . "<br>";
         echo "Valor:  R$ " . $prod['preco'] . "<br>";
-        echo "Imagem: "  ?> <img src="<?php echo $prod['foto'];?>">   <br>
-        
-        
+        echo "Imagem: "  ?> <img class="img-prod" src="<?php echo $prod['foto'];?>">   <br>
 
        <!-- <a style="color: green;" href="update.php?id=<?php echo $prod ['id']; ?>">Editar</a> -->
         |
@@ -31,3 +28,6 @@ if ($array_produtos){
 $conexao = null;
 
 ?>
+    
+    </body>
+</html>

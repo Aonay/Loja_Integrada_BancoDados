@@ -9,13 +9,6 @@
 </head>
 
 <body>
-
-
-
-    
-
-
-
     <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="content">
             <div class="card mb-3" style="max-width: 540px;">
