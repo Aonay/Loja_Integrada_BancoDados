@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     background-image: url(imagens/backg2.jpg);
+    background-size: cover;
 }
 
 h1 {
