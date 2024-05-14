@@ -30,7 +30,8 @@
     </style>
 
     <header>
-        <h1>DSM<span style="color: rgb(233, 55, 1);">lojas</span></h1>
+        <img src="uploads/logomenor.png" alt="logo" style="width: 100px; height:100px; object-fit:cover">
+       
     </header>
     
     <nav id="menu" style="z-index: 5;" class="navbar" style="background-color: #e3f2fd;">
@@ -40,7 +41,7 @@
         <a href="#">Eletrônicos</a>
 
         <a href="#"> <img class="carrinho" src="imagens/carrinho.png" width="35px"> Meu Carrinho </a>
-        <a href="#"><img class="login" src="imagens/login.png" width="30px" > Login</a>
+        <a href="login.php"><img class="login" src="imagens/login.png" width="30px" > Login</a>
     </nav>
 
     <form style="z-index: 4;">
