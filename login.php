@@ -8,13 +8,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
+<style>
+    #card {
+        border-color: orange;
+        
+    }
+
+    #btEnviar {
+        background-color: orangered;
+        border-color: orangered;
+
+    }
+
+    #btEnviar:hover {
+        background-color: orange;
+        border-color: orange;
+    }
+</style>
+
 <body>
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="container d-flex justify-content-center align-items-center" style="margin-top: 250px;">
         <div class="content">
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3" id="card" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="uploads/madruga1.png" class="img-fluid rounded-start" alt="...">
+                        <img src="uploads/logo3.png" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
                         <form action="" method="post">
@@ -28,7 +46,7 @@
                                     <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha">
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="submit" name="submit">Entrar</button>
+                                    <button class="btn btn-primary" id="btEnviar" type="submit" name="submit">Entrar</button>
                                 </div>
                             </div>
                         </form>
@@ -74,20 +92,31 @@ if ($_POST) {
                     echo "Senha correta";
 
                     session_start();
-                    $_SESSION['usuario']=$usuario;
-                    $_SESSION['hora']=time();
+                    $_SESSION['usuario'] = $usuario;
+                    $_SESSION['hora'] = time();
                     header('Location: cadastro.php');
-
                 } else {
-                    echo "Senha incorreta";
+            ?>
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <p style="color: red;">Usuário ou senha inválidos!</p>
+                    </div>
+            <?php
                 }
             } else {
-                echo "Usuário não existe!";
+                ?>
+                <div class="container d-flex justify-content-center align-items-center">
+                    <p style="color: red;">Usuário ou senha inválidos!</p>
+                </div>
+        <?php
             }
 
             $conexao = null;
         } catch (PDOException $e) {
-            echo $sql . "<br>" . $e->getMessage();
+            ?>
+            <div class="container d-flex justify-content-center align-items-center">
+                <p style="color: red;">Usuário ou senha inválidos!</p>
+            </div>
+<?php
         }
     }
 }

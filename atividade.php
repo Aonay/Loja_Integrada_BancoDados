@@ -17,11 +17,16 @@
 
 <body>
     <style>
-    .img-prod {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-}
+        #btnComprar{
+            background-color: orangered;
+            border-color: orangered;
+        }
+        #btnComprar:hover{
+            background-color: orange;
+            border-color: orange;
+
+        }
+
     </style>
 
     <header>
@@ -57,14 +62,13 @@
 
             if ($array_produtos){
                 foreach ($array_produtos as $prod) {
-                    echo '<div class="pt-5 col-sm-3">';
+                    echo '<div class="pt-5 col-sm-3 ">';
                     echo '<div class="card">';
-                    echo '<img class="card-img-top" src="'.$prod['foto'].'" alt="Imagem do produto" style="width: 100%; height: 200px; object-fit: cover;">';
+                    echo '<img class="card-img-top p-1" src="'.$prod['foto'].'" alt="Imagem do produto" style="width: 100%; height: 100%; object-fit: cover;">';
                     echo '<div class="card-body">';
                     echo '<h5 class="card-title">' . $prod['nome'] . '</h5>';
-                    echo '<p class="card-text">ID Produto: ' . $prod['id'] . '</p>';
                     echo '<p class="card-text">Valor: R$ ' . $prod['preco'] . '</p>';
-                    echo '<button class="btn btn-success" type="submit">Comprar</button>';
+                    echo '<button class="btn btn-success " id="btnComprar">Comprar</button>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
@@ -76,7 +80,7 @@
             
     <footer id="rodape">
         <br>
-        <p id="rdp">© Todos os direitos reservados - Alan, Gabriel Rigoni e Vitor - DSM 2  - Desenvolvimento Web 2 - 2024</p>
+        <p id="rdp" style="font-size: 20px;">© Todos os direitos reservados - Alan, Gabriel Rigoni e Vitor - DSM 2  - Desenvolvimento Web 2 - 2024</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
