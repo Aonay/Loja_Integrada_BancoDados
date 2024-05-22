@@ -77,7 +77,7 @@ $conexao = null;
       
     </div>
     <div class="col align-self-end">
-    <a href="atividade.php" style="text-decoration:none;">
+    <a href="index.php" style="text-decoration:none;">
       <button class="btn btn-danger" id="btnHome">Homepage DSM</button>
     </a>
 
