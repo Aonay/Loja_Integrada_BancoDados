@@ -116,7 +116,7 @@ $conexao = null;
                 <label for="floatingInput">Nome do produto</label>
               </div>
               <div class="form-floating mb-4">
-                <input type="number" name="_preco" class="form-control" id="floatingInput" placeholder="" required />
+                <input type="number" step=".01" name="_preco" class="form-control" id="floatingInput" placeholder="" required />
                 <label for="floatingInput">Valor R$</label>
               </div>
               <div class="form-floating mb-4">
